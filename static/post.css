@@ -1,0 +1,234 @@
+body{
+ background: rgb(242,242,242);
+background: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(171,156,194,1) 20%, rgba(134,112,169,1) 41%, rgba(111,84,153,1) 72%, rgba(111,84,153,1) 100%);
+
+}
+
+textarea{
+	width: 60%;
+	height: 60px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+input{
+	width: 60%;
+	height: 40px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+.bot{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+.bot:hover{
+	background: #6d44b8;
+}
+.frame1 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 450px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #6f5499;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  border-radius: 50px;
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 400px;
+  height: 700px;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #6f5499;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  border-radius: 50px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card {
+  width: 320px;
+  height: 600px;
+  border-radius: 30px;
+  box-shadow: 4px 8px 16px 0 #1b3b14;
+}
+.card1 {
+  width: 400px;
+  height: 500px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 4px 8px 16px 0 #1b3b14;
+}
+.card .left {
+  position: absolute;
+  left: 0;
+  width: 190px;
+  height: 600px;
+  overflow: hidden;
+}
+.card .left .avatar {
+  position: absolute;
+  left: 60px;
+  top: 90px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #cdbfe3;
+}
+
+.card .left .avatar img {
+  width: inherit;
+  height: inherit;
+  display: block;
+  border-radius: inherit;
+}
+.card .left .avatar .circle {
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+  border: 1px solid;
+}
+.card .left .avatar .circle:first-child {
+  left: -3px;
+  top: -3px;
+  width: 76px;
+  height: 76px;
+  border-color: #6f5499 #6f5499 #6f5499 transparent;
+}
+.card .left .avatar .circle:nth-child(2) {
+  left: -6px;
+  top: -6px;
+  width: 82px;
+  height: 82px;
+  border-color: #6f5499 transparent #6f5499 #6f5499;
+}
+.card .left .avatar:hover .circle:first-child {
+  transform: rotate(360deg);
+}
+.card .left .avatar:hover .circle:nth-child(2) {
+  transform: rotate(-360deg);
+}
+.card .left .info {
+  position: absolute;
+  text-align: center;
+  top: 122px;
+  width: 100%;
+}
+.card .left .info span {
+  display: block;
+}
+.card .left.info span.small {
+  top: 22px;
+}
+
+span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-transform: capitalize;
+  text-align: center;
+}
+span.big,
+.info p:nth-child(1) {
+  font-size: 10px;
+  font-weight: 600;
+}
+span.small,
+.info p:nth-child(2) {
+  font-size: 12px;
+  font-weight: 300;
+}
+.card .left .buttons {
+  position: absolute;
+  text-align: center;
+  bottom: 32px;
+  width: 100%;
+  height: 80px;
+}
+.card .left .buttons button {
+  padding-top: 2px;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #582c9f;
+  width: 120px;
+  height: 26px;
+  margin: 8px 0;
+  background: white;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 0 1px #6f5499;
+  cursor: pointer;
+}
+
+.card .left .buttons button:hover {
+  background: #6f5499;
+  color: white;
+}
+.card .right {
+  position: absolute;
+  right: 0;
+  width: 130px;
+  height: 600px;
+}
+.card .right .stats {
+  position: relative;
+  height: 200px;
+  cursor: pointer;
+  background: #cac7c7;
+  box-shadow: 0 -1px white;
+}
+.card .right .stats:nth-child(1) {
+  border-radius: 0 20px 0 0;
+}
+.card .right .stats:nth-child(3) {
+  border-radius: 0 0 20px 0;
+}
+.card .right .stats:first-child {
+  box-shadow: none;
+}
+.card .right .stats:hover {
+  background: #cdbfe3;
+}
+.card .right .stats span.big {
+  top: 30px;
+}
+.card .right .stats span.small {
+  top: 50px;
+}

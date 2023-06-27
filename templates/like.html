@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <title>Document</title>
+    <style>
+         .red-color {
+        color:red;
+        font-size: 50px;
+    }
+    .black-color {
+        color:black;
+        font-size: 50px;
+    }
+   </style>
+</head>
+<body>
+    <i class='fa fa-heart-o black-color'></i>
+</body>
+<script>
+    heart=document.querySelector('i')
+    console.log(heart)
+    heart.addEventListener('click',()=>{
+
+    if(heart.className==="fa fa-heart red-color"){
+           heart.className = "fa fa-heart-o black-color"
+        }else{
+           heart.className = "fa fa-heart red-color"
+        }
+    })
+</script>
+</html>

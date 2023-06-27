@@ -1,0 +1,86 @@
+
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<title>register / Login</title>
+	<link rel="stylesheet" type="text/css" href="./static/style_login.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form action="/register" method="post">
+					<label for="chk" aria-hidden="true">ثبت نام</label>
+					<input type="text" name="username" placeholder="نام کاربری " required>
+					<input  type="email" name="email" placeholder="ایمیل" required>
+					<input id="pass" type="password" name="password" placeholder="رمز عبور" required>
+					<center><p id="info"></p></center>
+					<input id="pass1" type="password" name="re_password" placeholder="تکرار رمز عبور" required>
+					<center><p id="info2"></p></center>
+
+					<button>ثبت نام</button>
+				</form>
+
+			</div>
+
+			<div class="login">
+				<form action="/login" method="post">
+					<label for="chk" aria-hidden="true">ورود</label>
+					<input type="text" name="user" placeholder="نام کاربری" required="">
+					<input type="password" name="pass" placeholder="رمز عبور " required="">
+					<button>ورود</button>
+				</form>
+			</div>
+	</div>
+<script>
+	pass1=document.getElementById('pass1')
+    pass=document.getElementById('pass')
+    info=document.getElementById('info')
+    info2=document.getElementById('info2')
+    console.log(pass)
+    console.log(pass1)
+    pass.addEventListener('change',(event)=>{
+        console.log(pass.value.length)
+        if (pass.value.length<8)
+    {
+        console.log("behind")
+        info.innerHTML="رمز عبور باید دارای حداقل 8 رقم باشد"
+        info.style.display='block';
+        info.style.color="#ff0000";
+        info.style.fontFamily='vazir';
+        info.style.fontSize='15px';
+        info.style.margin='auto';
+
+
+    }
+    else{
+        console.log("up");
+        info.style.display='none';
+    }
+    })
+      pass1.addEventListener('change',(event)=>{
+        console.log(pass.value.length)
+        if (pass1.value!==pass.value)
+    {
+        info2.innerHTML="رمز عبور با تکرار ان همخوانی ندارد"
+        info2.style.display='block';
+        info2.style.color="#ff0000";
+        info2.style.fontSize='15px';
+        info2.style.margin='auto';
+
+
+    }
+    else{
+
+
+        info2.style.display='none';
+    }
+    })
+
+</script>
+</body>
+</html>
+

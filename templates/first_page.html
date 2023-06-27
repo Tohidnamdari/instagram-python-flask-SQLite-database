@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+        body{
+
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+  background: linear-gradient(225deg, #6f5499, #f2f2f2);
+        }
+    </style>
+</head>
+<body>
+{%include 'nav.html'%}
+{%for o in dir_list:%}
+{%if "jpg" in o:%}
+<img style="width: 100px;height: 100px" src="./static/{{o}}" />
+{%endif%}
+{%endfor%}
+{%for d in post:%}
+
+{{d.text}}
+{%endfor%}
+</body>
+</html>

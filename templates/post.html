@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post</title>
+        <link rel="stylesheet" href="./static/post.css" />
+
+</head>
+<body >
+{%include 'nav.html'%}
+<div >
+<div class="frame1" dir="rtl">
+      <div class="center">
+        <div class="card1">
+          <form method="post" action="/post" enctype=multipart/form-data>
+            <br><br>
+            <center style="font-size: 25px;">اضافه کردن پست</center>
+                      <input type="file" name="pic" placeholder="تصویر " accept="image/png, image/jpg, image/jpeg" required="">
+                        <textarea placeholder="متن پست" name="text"></textarea>
+            					<button class="bot">اضافه</button>
+
+
+          </form>
+
+        </div>
+      </div>
+</div>
+    </div>
+</body>
+</html>
